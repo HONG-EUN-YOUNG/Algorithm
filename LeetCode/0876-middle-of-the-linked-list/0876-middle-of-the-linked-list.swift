@@ -21,8 +21,13 @@ class Solution {
         //     fast = fast?.next?.next
         // }
 
-        while let nextFast = fast?.next {
-            fast = nextFast.next
+        // while let nextFast = fast?.next {
+        //     fast = nextFast.next
+        //     slow = slow?.next
+        // }
+
+        while fast?.next != nil || fast?.next?.next != nil {
+            fast = fast?.next?.next
             slow = slow?.next
         }
 
